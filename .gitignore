@@ -1,0 +1,32 @@
+# Specific asset folders
+addl_rsc/
+assignments/
+readings/
+solutions/
+syllabus/
+test_dir/
+textbooks/
+draft/
+
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
