@@ -31,7 +31,8 @@ How will they mix?
 ![Dog on dolphin](https://66.media.tumblr.com/4d6a07fb5fd243718b19e0eeef75e9ae/tumblr_nl6uhgOL0j1sezoa7o1_500.gif)
 
 ### These files
-- [markdown](https://markdownguide.org/cheat-sheet/)
+- [markdown format](https://markdownguide.org/cheat-sheet/)
+- [available on github](https://github.com/damapak/ist303_spr2024)
 
 ## Introduction to Python and the command line
 
