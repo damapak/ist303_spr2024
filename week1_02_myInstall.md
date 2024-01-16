@@ -79,5 +79,7 @@ If not, install from terminal (remember that `python` can be shortened to `py` i
 ### Uninstall packages
 - `pip uninstall package`
 
+### [Agile Slides](week1_03_slide_agile.md)
+
 
 
