@@ -7,6 +7,12 @@ paginate: true
 backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ---
+# What is Agile?
+- Set of guiding principles
+- Response to predominant software development methods and processes at the time
+- "Waterfall" development
+
+---
 ### [Manifesto for Agile Software Development](https://agilemanifesto.org/)
 
 We are uncovering better ways of developing software by doing it and helping others do it. Through this work we have come to value:
