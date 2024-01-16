@@ -11,6 +11,10 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 - Set of guiding principles
 - Response to predominant software development methods and processes at the time
 - "Waterfall" development
+  - Highly specified documents from the start
+  - Planning and Implementation were sequential stages
+  - Failures: projects not meeting needs, developer burnout
+  - response was to make the process more tightly controlled
 
 ---
 ### [Manifesto for Agile Software Development](https://agilemanifesto.org/)
@@ -63,22 +67,28 @@ These principles form a philosophy, almost religious in terms of how they are us
 
 [Agile Subway Map](rsc/agile-subway.pdf)
 
+
+
 ---
 <style scoped>
 {font-size: 44px;}
 </style>
 ### How will these principles be brought into the course?
+- Practical: use in exercises and the team project
 - Pilone & Miles text
 - Readings
 - Explorations of some of the more popular methods
-- Use in exercises and the team project
 
 ---
-Information systems is at the intersection of social science and computer science
-
-Many of the readings will have a social science/ management/ organizational behavior component
-
-Nerur & Balijepally
+<style scoped>
+{font-size: 35px;}
+</style>
+## Where does this course fit in CGU's IS&T programs?
+- Information systems is at the intersection of social science and computer science
+- Informed by practice, design science, and theory
+- Many of the readings will have a social science/ management/ organizational behavior component
+- Software development has spawned [some research interest](rsc/sd_journal_list.md)
+- Review Nerur & Balijepally
 
 ---
 ## Nerur & Balijepally 2007
@@ -90,23 +100,59 @@ Presents software development as a "wicked problem", one where:
 Applied design lessons from what field(s)?
 
 ---
-Strategic thinking in design
-old methods characterized by:
+<style scoped>
+{font-size: 28px;}
+</style>
+# Evolution of Design Thinking
+### old methods characterized by:
 - formulaic and prescriptive thinking (advanced knowing)
 - mechanistic worldview: predictable, verifiable, controllable
 - past experience (backward looking)
 
-new methods characterized by:
+### new methods characterized by:
 - emergent processes centered around learning
 - constant questioning through cycles of formulation, implementation and reflection
 - dynamic worldview: uniqueness, ambiguity, complexity and change
+- new/oud summarized on pg 82 (next slide)
 
 ---
-Single vs. Double-loop learning
-Single-loop learning:
-- df
-
-Double-loop learning:
-- df
+pg 82
+![bg 70%](rsc/nerur_chart.png) 
 
 ---
+![bg 70%](rsc/nerur_agile.png) 
+Fig 2:
+Agile +
+Holog-
+raphic
+
+---
+### Key organizational principles
+- value dependent on org ability to nurture leaning, teamwork, personal empowerment
+- _"heterarchical"_ structure: any unit can govern or be governed by others, depending on circumstances 
+- _"holographic"_: each piece of the org has within it the information to reconstruct the whole (redundancy + capacity to learn/evolve)
+- idea of "minimal critical specification"
+- _"adaptive software development (ASD)"_ (Highsmith): \
+speculate -- collaborate -- learn
+- _"double-loop" learning_: learning to learn
+
+---
+### Subway map
+Places you'll find them:
+- research articles (N & B 2007)
+- blog posts
+- books (Pilone & Miles)
+- consultancy groups
+- within organizations
+
+Sometimes will be explicitly called out and obvious, others more implicit or referenced with different terminology
+
+---
+### How to use the subway map
+- Do not attempt to memorize them all! 
+- Document and notate as you come across them (you'll increasingly see connections between them)
+- Track/star/highlight those you have used and find useful
+- Use for ideas/inspiration during your team project - experiment!
+- Fill in gaps in your knowledge/review concepts (pdf is hyperlinked)
+- text version for easier note-taking available [here](Agile_Subway_Glossary.md)
+
