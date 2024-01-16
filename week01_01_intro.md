@@ -78,6 +78,6 @@ How will they mix?
 </details>
 
 
-### [IDE Exploration](week1_02_myInstall.md)
+### [IDE Exploration](week01_02_myInstall.md)
 
 

@@ -100,7 +100,7 @@ Another way to visualize it:
 
 ---
 
-[installation and setup](week2_02_src.md)
+[installation and setup](week02_02_src.md)
 
 
 
