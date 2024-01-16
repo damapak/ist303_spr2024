@@ -79,6 +79,10 @@ If not, install from terminal (remember that `python` can be shortened to `py` i
 ### Uninstall packages
 - `pip uninstall package`
 
+---
+
+### [Jamboard](https://jamboard.google.com/d/1AjMkOxwMeCC2RCY-7kpie7gL0H1G6x4tunKn876vEyw/edit?usp=sharing)
+
 ### [Agile Slides](week1_03_slide_agile.md)
 
 
