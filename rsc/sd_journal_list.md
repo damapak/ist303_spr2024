@@ -19,3 +19,5 @@
 - ACM Transactions on Programming Languages and Systems
 - IEEE Transactions on Neural Networks and Learning Systems
 - Proceedings of the IEEE
+
+[back to agile slides](/week01_03_slide_agile.md)
