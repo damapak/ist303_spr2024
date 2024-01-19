@@ -7,21 +7,23 @@ paginate: true
 backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ---
-## <!--fit--> Introduction to Git and Github
-![](rsc/xkcd_git.png)
+
+# Introduction to Git and Github
+![bg right:40% 90%](rsc/xkcd_git.png)
 
 ---
 
 ## Git Flow Simplified
-![w:650](rsc/complicated_git.svg)
+![bg right:65% 90%](rsc/complicated_git.svg)
 
 ---
-What is Git?
+**What is Git?**
+A version control system. A system for methodically tracking and managing changes to a codebase (repository). Can communicate changes made locally to remote code storage locations and vice versa.
 
-A version control system. A system for methodically tracking and managing changes to a codebase. Can communicate changes made locally to remote (web-hosted) code storage locations (remote repositories).
+**Where do you access Git?**  
+_In the terminal_ . . . . . .![w:60](rsc/terminal.png)
 
-What is Github?
-
+**What is Github?**
 A place to remotely store a codebase where you and others can access and manipulate it with Git.
 
 ---
@@ -89,14 +91,28 @@ You hasten back towards camp and deliver all of the new medicinal capabilities s
 
 Shortly after, the other team members also radio back to camp (`git fetch`) and see what you have delivered. 
 
-They wish to have the contents you have added to the tent in their backpacks too, and they radio camp to have drones deliver copies of these items so that their packs are up-to-date with camp (`git pull`)
+They wish to have the contents you have added to the tent in their backpacks too, and they radio camp to have drones deliver copies of these new items so that their packs are up-to-date with camp (`git pull`)
 
 ---
-![h:500](rsc/git_smry.jpg)  
+![h:575](rsc/git_smry.jpg)
+
+---
+<style scoped>
+{font-size: 30px;}
+</style>
+
+### Local Only:
+- _`add`: instruct Git to locally track changes to a file (or files)_
+- _`commit`: prepare local changes ("stage") to be sent to a remote repo_
+### Local ---> Remote
+- _`push`: send changes from local repo to remote repo (github)_
+### Remote ---> Local:
+- _`pull`: copy new changes from a remote repo (github) to your local repo. Equivalent to fetch + merge._
+- _`clone`: copy all contents of a remote repo_
 
 ---
 Another way to visualize it:
-![w:600](rsc/gitflow.png) 
+![w:700](rsc/gitflow.png) 
 
 ---
 
