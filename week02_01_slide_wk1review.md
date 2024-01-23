@@ -68,4 +68,4 @@ Duplicated as an image file below:
 #### IDE: VS Code
 - explorer
 - extensions (install the python one)
-- 7-minute [VS code intro](https://www.youtube.com/watch?v=B-s71n0dHUk) 
+- more info: 7-minute [VS code intro](https://www.youtube.com/watch?v=B-s71n0dHUk) 

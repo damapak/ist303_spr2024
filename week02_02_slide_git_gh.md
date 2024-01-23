@@ -116,7 +116,7 @@ Another way to visualize it:
 
 ---
 
-[installation and setup](week02_02_src.md)
+## [Git and Github installation and setup](week02_03_src.md)
 
 
 
