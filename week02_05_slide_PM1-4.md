@@ -42,12 +42,13 @@ In software development, an _Iteration_ is:
 - after final iteration, software is what the customer wants?
 
 ---
-### Customer-driven rules for success:
+![bg right:48% 100%](rsc/scope_change.jpeg)
+## Customer-driven rules for success:
 1) the customer is always right.
 2) when in doubt, refer to rule 1.
 
 A project that does not provide what the customer wants is a failure.
-It doesn’t matter whether the customer ‘signed off’ on requirements at some point.
+It doesn’t matter whether the customer ‘signed off’ on requirements.
 
 _What is there to like and dislike about this philosophy?_
 
