@@ -101,28 +101,35 @@ There are a few options for telling Git to ignore certain directories and files.
 - works on a per-project basis (not global)
 ---
 <style scoped>
-{font-size: 31px;}
+{font-size: 38px;}
 </style>
 #### Option #2: edit the _.git/info/exclude_ file
 - Git creates this file when your project is initiated
 - notice the _exclude_ file has no extension, in contrast with _.gitignore_ which is only an extension
 - open with text editor and add directories/files you want excluded
 - works on a per-project basis (not global)
+---
 
-**Where is the _.git_ folder?**
-The _exclude_ file is within a hidden directory (begins with a `.`). To view all files from terminal:
+## Where is the _.git_ folder?
+The _exclude_ file (no extension) is within a "hidden" directory. Hidden directories begin with a `.`
+
+To view all files from terminal, including hidden files:
 - windows (powershell): `ls -Force`
 - mac/linux: `ls -la`
 
+Now navigate to _.git/info_ and type `cat exclude` to view its contents. 
+
 ---
 ## So, where are we now?
-_Project folder, project directory, local repository all refer to the same thing_
+We've seen how to:
 - Navigate in the terminal
 - Use the terminal to create directories for our projects
 - Initialize Git in the project folder
 - Create a virtual environment in our project folder
 - Activate the venv and install needed python packages 
 - Use Git in the terminal to connect to Github repositories
+
+_folder, directory, and repository all describe where project files are_
 
 ---
 ## You are here:

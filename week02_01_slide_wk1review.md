@@ -64,8 +64,11 @@ Duplicated as an image file below:
 - terminal
 - text editor
 - file explorer
-- python interpreter
-#### IDE: VS Code
-- explorer
+- python interpreter `>>>`
+#### IDE: _VS Code Demo_
+- where to find above functionality
 - extensions (install the python one)
-- more info: 7-minute [VS code intro](https://www.youtube.com/watch?v=B-s71n0dHUk) 
+- for more info: 7-minute [VS code intro](https://www.youtube.com/watch?v=B-s71n0dHUk) 
+---
+
+[Week 2 slides](week02_02_slide_git_gh.md)
