@@ -125,9 +125,10 @@ while True:
 
 ---
 ### Can we do better?
-- 'while True' should send warning bells ringing - easy to forget / make a mistake regarding breaking out of the loop
+- 'while True' is risky
 - using `len(var)-1` syntax can be error prone; have to remember if you need the -1 or not 
-- do we need the last `if` check to break out of the loop? Having an `if` statement at the same indent level as another `if` can be hard to read/reason about
+- do we need the last `if` check to break out of the loop? 
+- Having multiple `if` statements at the same indentation level can be hard to read/reason about
 
 _python has so many bulit-in functions, including methods for its data types, you want to start there: often clearer to use, optimized to run faster_
 
@@ -204,7 +205,7 @@ Most functionality in Python for manipulating containers of objects come in list
 Lists can be defined by a set of square brackets, with items separated by commas.
 - empty list: `mylist = []`
 - list with items: `mylist = [1, 2, "strings, too!"]`
-- can convert other objects to list using the `list()` function (no argument creates an emty list the same as list[])
+- can convert other objects to list using the `list()` (with no argument it creates an empty list)
 ```
 list("Separate the letters") # string to list
 list(("tuple", "to", "list")) # tuple to list
@@ -220,7 +221,8 @@ mylist = "split this string".split(' ') ; mylist
 mylist[0] = "join" ; mylist
 mystring = ' '.join(mylist) ; mystring
 ```
-Split() and join() are the opposite of each other.
+**split()**: string -> list
+**join()**: list -> string (join is a string method as it uses the specific string between joined items)
 
 ---
 ### List indexing
@@ -294,21 +296,26 @@ l.count(3)
 
 ---
 ### Additional list functionality
-- `len(mylist)` return the number of items in a list
-- sort with `sort()` and `sorted()`
-  - sort() rearranges the list itself (modifies list in place)
-  - sorted() returns  copy that is sorted
+- Counting
+  - `len(mylist)` returns the number of items in a list
+- Sorting
+  - `.sort()` rearranges the list itself (modifies list in place)
+  - `sorted(mylist)` returns  copy that is sorted
 
 ---
 ### List Comprehensions
 List comprehensions are a concise way to iterate over items and create a list
 
-Follow the format: 
 
-[_expression_ for _item_ in _iterable_]
+### [_expression_ for _item_ in _iterable_]
+```
+[num * 2 for num in range(6)]
+```
+Can assign to a variable:
 ```
 numlist = [num * 2 for num in range(6)]
 ```
+
 ---
 ### Adding conditions to comprehensions
 Add the item to the list of a condition is met.
@@ -327,11 +334,14 @@ for num in range(6):
 
 ---
 ### Multiple conditions and Nesting
+Take the following two lists:
 ```
 list1 = [1,2,3]
 list2 = [10, 20, 30]
-
-# multipe 'for' criteria (one long list)
+```
+Consider the results of the following:
+```
+# multipe 'for' criteria (flat: one long list)
 [x * y for x in list1 for y in list2] #iterate all x, one y at a time
 
 # nested (list of lists, or a matrix)
@@ -350,7 +360,7 @@ nest[1][2]
 
 the `[]` go from highest-level (exterior) list to lower level list (interior). Note they are not nested, they are entered sequentiually: 
 
-nested_list[ outer list index ][ inner list index ]
+#### nested_list[ outer list index ][ inner list index ]
 
 ---
 # <!--fit--> Lubanovic Ch 8: <br> Dictionaries and Sets
