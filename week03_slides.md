@@ -539,12 +539,12 @@ Kadenic et al looked at team maturity and its impact on team performance, using 
 - Does team maturity impact the perception of successful application of the Scrum framework?
   - perception of success was associated with team maturity (0.537)
 - How does team composition impact the perception of successful application of the Scrum framework?
-  - most significant factors: team members are fully allocated, team members received agile training, and teams are self-managing. 
+  - most significant factors: fully allocated team members, team members received agile training, self-managing teams. 
 
 ---
 ### Research Questions, cont'd
 
-- How does Scrum values impact the perception of successful application of the Scrum framework? \
+- How do Scrum values impact the perception of successful application of the Scrum framework? \
 3 values were significant w/respect to perceived success:
   - teams who stated that scrum values provide direction in their work
   - teams who can communicate openly about work and challenges with stakeholders
@@ -553,6 +553,7 @@ Kadenic et al looked at team maturity and its impact on team performance, using 
 ---
 ### Research Questions, cont'd
 -  How do Scrum roles impact the perception of successful application of the Scrum framework? \
+
 All 3 roles determined to contribute to successful outcomes. Specific findings:
     - developers’ ability to daily adapt their plan towards the sprint goal
     - product owners having the mandate to prioritize 
