@@ -130,10 +130,11 @@ Theory must be rebuilt by a new team.
 - learning with support from others, we all have our own skillsets
 
 ---
-## Reflection
+### Reflection
 - What are your thoughts on "programming as theory"?
 - Does programming require this deeper connection between the real world and the program code?
 - What are the most important skills for programmers to have? 
 - Are expert python skills or creativity and understanding the context of real world problems more important? Does your answer differ for 1985 compared to 2020?
 
-_.md document on github to facilitate note-taking on your reflections_
+.md document on github to facilitate note-taking on your reflections:
+https://github.com/damapak/ist303_spr2024/blob/main/WS_Programming_as_theory.md
