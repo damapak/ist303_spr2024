@@ -2,9 +2,9 @@
 
 ## General
 Python structures code with indentation (not brackets)
-- use spaces, not tabs (different text editors store tab chars differently)
+- recommend using spaces, not tabs (different text editors store tab chars differently)
 
-Statements/conditionals end in `:`
+Statements/conditions end in `:`
 ```
 if 1 == 2:
   print("True")
@@ -279,7 +279,16 @@ _mystring.functionName()_
 
 #### Some examples
 ```
+# search a string with find
 if "no sea".find("c") == -1:  
+  print("i did not find a c")
+
+# search a string with count
+if "no sea".count("c") == 0:  
+  print("i did not find a c")
+
+# search a string with in
+if "c" not in "no sea":
   print("i did not find a c")
 
 "bumblebee".count("b")

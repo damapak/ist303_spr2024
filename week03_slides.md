@@ -94,9 +94,13 @@ While (and For) both run the loop a number of times, until some condition is met
 ### Combining control flow statements and loops
 You can nest statements inside each other for added control flow.
 
-Say we have a bag of fruits (a list) and we want to pull out a random fruit from the bag and try it, until none are left. For fruits we know, we will print out a message specific to that fruit, for all others we will print out a standard message with the fruit name.
+```
+while...:
+  if condition:
+    for x in list...
+```
 
-We can do this with a combination of statements, in this case nesting an if block inside a while loop.
+Say we have a bag of fruits (a list) and we want to pull out a random fruit from the bag and try it, until none are left. For fruits we know, we will print out a message specific to that fruit, for all others we will print out a standard message with the fruit name.
 
 ---
 ###  _`Nesting`_ __`//\\/\`
@@ -350,7 +354,15 @@ Consider the results of the following:
 
 
 ---
-### List of lists: accessing items
+# Flat:
+## [...]
+
+# Nested:
+in this case, a list of lists:
+## [[...], [...], [...]]
+
+---
+### Accessing nested objects by offset
 ```
 list1 = [1,2,3]
 list2 = ["cat", "dog", "parrot"]
@@ -361,6 +373,13 @@ nest[1][2]
 the `[]` go from highest-level (exterior) list to lower level list (interior). Note they are not nested, they are entered sequentiually: 
 
 #### nested_list[ outer list index ][ inner list index ]
+
+---
+### You can go as deep as you want down the rabbit hole...
+```
+nest[1][2] = ["third", "level"]
+nest[1][2][0]
+```
 
 ---
 # <!--fit--> Lubanovic Ch 8: <br> Dictionaries and Sets
@@ -613,3 +632,12 @@ _from agilealliance.org_
 - continuous integration: code changes immediately tested
 - test-first programming: write test, fail test, write code to pass test
 - incremental design
+
+[agile subway map](https://www.agilealliance.org/agile101/subway-map-to-agile-practices/)
+
+---
+## Scrum and XP 
+- Compare the two methods
+
+- Which do you gravitate towards?
+- What would you prioritize: specific practices or philosophical approach?
