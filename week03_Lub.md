@@ -300,57 +300,10 @@ if "c" not in "no sea":
 "bumblebee".rindex("b")
 ```
 
-### Regular expressions
-Regular expressions are a pseudo language for matching patterns in strings. They are known for being  difficult to read (and therefore to anticipate effects).
-
-Regular expressions are not just a Pyhton thing, and exist outside the scope of just Python. Therefore you need to import a Python library to utilize their functionality. (base Python vs. Library)
-
-You need to import the re module with `import re` prior to using.
-- `re.search(pattern, string)`
-  - returns a match object if the pattern is found in the string, otherwise returns None
-  - access match object with `.group(0)`, i.e. `re.search(pattern, string).group(0)`
-- `re.findall(pattern, string)`
-  - returns a list of all matches in the string
-- `re.sub(pattern, replacement, string)`
-  - returns a string with all instances of the pattern replaced with the replacement string
-
-### Example: Regex + string methods
-In regex, 
-  - [fg] returns matches for f or g
-  - the + symbol returns 1 or more matches
-
-
-The following regex statement equates to 'find one or more instances of any of the following characters that appear inside the brackets':
-```
-"[aeiohnpsty]+"
-```
-1. import the re module: \
-`import re`
-2. assign the following text to a variable named _coded_msg_: \
-`"cup fly turf hour nick seas dry"`
-3. use the **re.findall()** function to return a list of _coded_msg_ characters that match the regex statement shown above step 1. Assign the result to a variable named `msg`
-4. use the string join() method to concatenate the `msg` variable to depict a message (_hint: recall you can use an empty string `''` as the object of the join method_)
-
-<details>
-<summary>Solution</summary>
-
-```
-msg = re.findall("[aeiohnpsty]+", coded_msg)
-
-''.join(msg)
-```
-
- </details>
-
-#### Resources to learn more about regular expressions (regex):
-  - [python docs](https://docs.python.org/3/library/re.html)
-  - [datacamp cheat sheet](https://www.datacamp.com/cheat-sheet/regular-expresso)
-
-
 #### RECAP: Options for searching strings in Python
 
 - slicing with `[ ]` (covered previously)
-- regex (requires _re_ library)
+- regex (requires _re_ library, covered later)
 - string methods listed above: count( ), find( ), index( )
 
 ### Python len() function
