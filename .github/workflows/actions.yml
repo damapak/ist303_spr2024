@@ -9,7 +9,7 @@ on: # when to run
 
 jobs:
 
-  build:
+  #build:
     # build steps here
 
   test: 
@@ -38,6 +38,6 @@ jobs:
         run: |
           pytest -v
 
-  deploy:
+  #deploy:
     # deploy steps here
           
