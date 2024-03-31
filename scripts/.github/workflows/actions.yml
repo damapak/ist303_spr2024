@@ -1,4 +1,4 @@
-name: run main.py
+name: run pytest -v
 
 on: # when to run
   push:
@@ -8,22 +8,36 @@ on: # when to run
     branches: [main]
 
 jobs:
-  build: 
-    runs-on:
+
+  build:
+    # build steps here
+
+  test: 
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: [3.5, 3.9, 3.10]
+
     steps:
 
       - name: checkout repository content
         uses: actions/checkout@v2 # use pre-existing action
 
       - name: setup python
-        uses: actions/setup-python@v5 # details: https://github.com/actions/setup-python
+        uses: actions/setup-python@v4 # details: https://github.com/actions/setup-python
         with:
+          python-version: ${{ matrix.python-version }}
 
       - name: install dependencies
-        run: |  # terminal commands
+        run: |  # indicates terminal commands
           python -m pip install --upgrade pip
           pip install -r requirements.txt 
 
-      - name: execute python script
-        run: python main.py
+      - name: run tests
+        run: |
+          pytest -v
+
+  deploy:
+    # deploy steps here
           
