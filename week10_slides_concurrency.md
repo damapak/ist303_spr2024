@@ -522,4 +522,3 @@ Priorities should be:
 - 4/3 Lecture, exercise assigned next week
 - 4/10 Lecture + In-class work
 - 4/17 Milestone 2.0 presentations
-

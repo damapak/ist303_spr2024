@@ -24,9 +24,14 @@ pip-delete-this-directory.txt
 instance/
 .webassets-cache
 
+# Pytest
+.pytest_cache/
+
 # Environments
 .env
+.env/
 .venv
+.venv/
 env/
 venv/
 ENV/

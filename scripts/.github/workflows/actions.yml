@@ -1,0 +1,29 @@
+name: run main.py
+
+on: # when to run
+  push:
+    branches: [main]
+  
+  pull_request:
+    branches: [main]
+
+jobs:
+  build: 
+    runs-on:
+    steps:
+
+      - name: checkout repository content
+        uses: actions/checkout@v2 # use pre-existing action
+
+      - name: setup python
+        uses: actions/setup-python@v5 # details: https://github.com/actions/setup-python
+        with:
+
+      - name: install dependencies
+        run: |  # terminal commands
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt 
+
+      - name: execute python script
+        run: python main.py
+          

@@ -25,14 +25,3 @@ class Kens:
     def update(self, messager, event_data):
         self.events.append(event_data)
         print(f"{self.fname} {self.lname} got a message from {messager.fname} {messager.lname}: {event_data}")
-
-#instantiate some Kens
-# for use in an interactive session: import observer, then assign k1,k2,k3,k4 = observer.main()
-def main():
-  k1 = Kens(fname="Ken",lname="Masters",posts=[23,45,66])
-  k2 = Kens(fname="Ken",lname="Just Ken",posts=[12,13])
-  k3 = Kens(fname="Ken",lname="Obi")
-  k4 = Kens(fname="Ken",lname="YouDigIt")
-  k1.add_observer(k2)
-  k1.add_observer(k3)
-  return k1, k2, k3, k4
