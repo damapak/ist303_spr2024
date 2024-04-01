@@ -16,16 +16,16 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        python-version: [3.8, 3.9]
+        python-version: [3.8, 3.9, 3.12]
         os: [windows-latest, macos-latest]
 
     steps:
 
       - name: checkout repository content
-        uses: actions/checkout@v2 # use pre-existing action
+        uses: actions/checkout@main # use pre-existing action, main br of feature instead of version #, i.e v4
 
       - name: setup python
-        uses: actions/setup-python@v2 # details: https://github.com/actions/setup-python
+        uses: actions/setup-python@main # details: https://github.com/actions/setup-python
         with:
           python-version: ${{ matrix.python-version }}
 
