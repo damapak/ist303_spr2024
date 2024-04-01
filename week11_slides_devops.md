@@ -257,12 +257,12 @@ This is done using version control and for the purposes of this course git and g
 
 We haven't previously discussed build scripts
 
-**Build scripts** configure a project, typically a library or an application; it typically specifies dependencies, repositories, and other settings, and produces artifact(s) or package(s) for later deployment. 
+**Build scripts** configure a project, typically a library or an application; specifies dependencies, repositories, any other settings, and produces artifact(s) or package(s) for later deployment. 
 
 ---
 ## Build script: typical contents
 - **Fetch Code**: get the latest code from the source control repository
-- **Compile code**: compile the code (convert to binary), check the dependencies/modules
+- **Compile code**: compile the code, check the dependencies/modules
 - **Unit Tests**: automated unit tests are run
 - **Linking**: libraries and code files are linked as needed
 - **Build Artifacts**: artifacts (like executables or binary files) are built and stored and/or deployed
@@ -279,16 +279,21 @@ We haven't previously discussed build scripts
 ## Builds in the team projects
 For purposes of this course, we will focus on: 
 - fetching the latest code
-- check and install dependencies
-- testing: Pytest configuration
+- checking and installing dependencies
+- running tests
 
-Additional exercises to hone your skills (artifact creation):
-- Okken appendix 4: build a python package (create an installable package)
-- [deploy a flask app to Heroku walkthrough](https://www.honeybadger.io/blog/flask-github-actions-continuous-delivery/)
+---
+## Additional exercises to hone your skills (artifact creation):
+Create installable packages
+- Okken appendix 4: build a python package
+
+Deploy a flask app using free hosting
+- [using render](https://docs.render.com/deploy-flask)
+- [flask docs](https://flask.palletsprojects.com/en/2.0.x/deploying/)
 
 ---
 ## Finding and installing dependencies
-Within a virtual environment (activated):
+With a virtual environment activated:
 
 `pip freeze` lists all the Python packages you have installed in the current environment, along with version number
 
@@ -297,71 +302,140 @@ Within a virtual environment (activated):
 - can open & edit as needed (remove unnecessary dependencies or revise version info)
 
 ---
-## Dependencies when NOT using virtual environment
-Can use the pipreqs library
-```
-pip install pipreqs
-python -m  pipreqs.pipreqs --encoding utf-8  /path/to/project
-```
-
-This gets only libraries used in your codebase, whereas freeze gets every package that is installed (using pip).
-- if you are not in a virtual env't, you don't want to _freeze_ ALL installed packages on your machine into a requirements.txt
-
----
-## Intro to Github actions
-GH free tier: 2,000 minutes of actions/month
-
-GH actions:
-Event -> create container -> execute action
-
-GH actions: creates a container built to your specifications
-
-Jobs are broken into steps
-using `- uses` can make use of pre-existing actions (checkout repo code, setup python, etc.)
+## INTERACTIVE
+For the remainder of the CI material:
+- follow along in your local team project repository
+- identify someone in your team to push the changes or make them directly in github (or coordinate taking turns, or do it later)
 
 
 ---
+<style scoped>
+{font-size: 45px;}
+</style>
+### Requirements.txt
+If you don't already have a **requirements.txt** in your team repo, go ahead and create one with `pip freeze` on your local machine
 
-
+Open and edit it until satisfied, communicate with your team and have someone push/create it to your team github repo
 
 ---
 ## Directory structure
 
 project/
-.github/workflows/
-  |--actions.yml
-.gitignore
-main.py
-requirements.txt
-README.md
-templates/
-static/
-tests/
-  |---test_unit.py
-  |---test_func.py 
+|.gitignore
+|**requirements.txt**
+|main.py
+|README.md
+|templates/
+|static/
+|...
+
 
 ---
 ## Automate with CI: Testing
 Github actions can run test scripts (execute Pytest), but we need to have a test structure in place
 
 to automate testing, we need to have:
-- function and unit tests
+- function/unit tests
 - structured test code (directory)
 
 ---
-## Testing Structure (Pytest)
+### Testing Structure (Pytest)
 
 For each test directory and subdirectory, you need to have an `__init__.py` file (empty file). This prevents issues if two test files have the same name.
 
----
-![](rsc/okken_dirsetup.png)
+Go ahead and create a _tests_ directory in your main project directory. Add an empty **__ init__.py** file in your _tests_ directory.
+
+If you already have a solid test structure that mirrors your codebase structure and have testing scripts you are happy with you do not need to restructure your repo.
+
 
 ---
-# Week 11: CI/CD: Builds, Github actions, requirements.txt, testing on different OS and python versions w/gh actions
+## Directory
+project/
+|...
+|tests/ 
+||--__ init__.py 
+||--test_unit.py 
+||--test_func.py 
 
-For each feature demo'd, have teams/individuals go in their repos and add something similar
+---
+## Tests folder
+This folder is where you will keep all your tests. You can write/migrate your existing tests here.
 
-- [gh actions patrick loeber](https://www.youtube.com/watch?v=PaGp7Vi5gfM)
-- [pytest + gh actions automation](https://www.youtube.com/watch?v=DhUpxWjOhME)
-- [pytest + gh actions another one](https://www.youtube.com/watch?v=0aEJBygCn5Q)
-- [gh actions](https://www.youtube.com/watch?v=yfBtjLxn_6k)
+---
+### Automation with Github actions
+- you have your dependencies stored in a requirements.txt file
+- you have your test code structured and organized
+
+Now we're ready to set up our first github action!
+
+---
+## Github actions are stored in YAML files
+[YAML ain't markup language](https://yaml.org/)
+
+YAML is similar to JSON, but more _pythonized_ (indented, with colons :)
+
+Can store data or config files
+
+---
+## Configure your repo for Action
+- in the main project directory, add a **directory** named _.github/_
+- within that dir, add a directory named _workflows/_
+- within the _.github/workflows/_ directory, add a YAML file (name it whatever you want, i.e. 'actions.yml')
+
+Go ahead and have someone make that change in your team repo
+
+---
+## Where to put your .yml
+project/
+|.github/workflows/
+|||--actions.yml
+|.gitignore
+|main.py
+|requirements.txt
+
+Your repo is now configured to use github actions
+
+---
+## What are Github actions?
+Github actions are actions that are triggered by a specified event (repo push, pull request, time-scheduled, etc.) and executed within a github-created environment
+
+GH free tier: 2,000 minutes of actions/month
+
+---
+## Features of actions
+
+Actions:
+- follow the cycle of `event -> create container -> execute action`
+- they create container(s) built to your specifications and execute the code within that environment
+- do not change anything in your repository by default (they are not operating in the repo environment)
+- run history available in the 'Actions' section of your repo
+
+---
+## Defining actions
+- `on:` defines the triggering event(s)
+- `jobs:` contain named entities that define what OS to run on and the steps to execute
+- each step has a defined name and associated properties (code to run or which built-in actions to use)
+- can make use of pre-existing actions (checkout repo code, setup python, etc.)
+
+---
+## Example YAML
+the course github has a sample .yml file configured to test the 'observer.py' file in the _scripts_ dir
+
+[sample yml](.github/workflows/actions.yml)
+
+---
+## Run history
+
+[history of actions in course github](https://github.com/damapak/ist303_spr2024/actions)
+
+
+---
+## Making a change and pushing it
+We've reviewed the details of a successful test run, now we'll change the observer_test.py so that a test fails
+
+[observer_test file](scripts/observer_test.py)
+
+now we'll push to github and watch the action run
+
+---
+## Go forth and create/migrate your tests to that they will auto-run!!
