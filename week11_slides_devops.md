@@ -426,6 +426,9 @@ the course github has a sample .yml file configured to test the 'observer.py' fi
 ---
 ## Run history
 
+available via github:
+github.com/GH-USER/REPO/actions
+
 [history of actions in course github](https://github.com/damapak/ist303_spr2024/actions)
 
 
